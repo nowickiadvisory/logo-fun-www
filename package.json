@@ -1,0 +1,10 @@
+{
+  "name": "logo-fun-www",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/tresc.test.mjs",
+    "validate": "npx --yes html-validate@9 index.html polityka-prywatnosci/index.html usun-konto/index.html regulamin/index.html"
+  }
+}

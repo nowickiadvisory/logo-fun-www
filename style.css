@@ -1,0 +1,32 @@
+/* Strona dla rodziców Logo Fun: tylko systemowe czcionki, bez zasobów z innych domen. */
+:root {
+  --tlo: #f5f8fb;
+  --tekst: #1f3a5f;
+  --akcent: #1d6fa3;
+}
+body {
+  margin: 0;
+  background: var(--tlo);
+  color: var(--tekst);
+  font-family: system-ui, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+main,
+footer {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 16px;
+}
+h1 {
+  font-size: 28px;
+  line-height: 1.25;
+}
+a {
+  color: var(--akcent);
+}
+footer {
+  border-top: 1px solid #d3dce6;
+  margin-top: 32px;
+  font-size: 15px;
+}
