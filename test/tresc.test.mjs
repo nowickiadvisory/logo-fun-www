@@ -33,10 +33,18 @@ const STRONY = [
 
 test('polityka prywatności: tekst strony = blok kontraktu', () => {
   const html = czytaj('polityka-prywatnosci/index.html');
-  const data = /\(wersja 1\.0, (20\d\d-\d\d-\d\d)\)/.exec(html)?.[1];
+  const data = /\(wersja 1\.1, (20\d\d-\d\d-\d\d)\)/.exec(html)?.[1];
   assert.ok(data, 'data publikacji w nagłówku');
   const oczekiwany = bialeZnaki(odmarkdown(podstaw(czytaj('tresc/polityka.md'), data)));
   assert.equal(tekstHtml(main(html)), oczekiwany);
+});
+
+test('polityka 1.1 (D185): logowanie linkiem z e-maila i opcjonalne hasło, bez „kodów logowania”', () => {
+  const tekst = tekstHtml(main(czytaj('polityka-prywatnosci/index.html')));
+  assert.ok(tekst.includes('adres e-mail (do logowania linkiem z e-maila), a jeśli ustawisz hasło'));
+  assert.ok(tekst.includes('wyłącznie w postaci zaszyfrowanego skrótu'));
+  assert.ok(tekst.includes('Linki do logowania i do zmiany hasła wysyła w naszym imieniu dostawca poczty e-mail.'));
+  assert.ok(!/logowania kodem|Kody logowania/.test(tekst));
 });
 
 test('usuń konto: tekst strony = blok kontraktu', () => {

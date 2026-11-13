@@ -13,7 +13,7 @@ z innych domen — strona dla rodziców aplikacji z kategorii Kids.
 ## Skąd treść
 
 Bloki tekstu (markdown) są w `tresc/` — źródło: kontrakt T098 w `ops.contract` projektu Logo Fun
-(polityka prywatności wersja 1.0 zatwierdzona decyzją D48). Strony HTML generuje `scripts/build.mjs`:
+(polityka prywatności wersja 1.0 zatwierdzona decyzją D48; wersja 1.1 — logowanie hasłem, D185/T418). Strony HTML generuje `scripts/build.mjs`:
 
 ```
 node scripts/build.mjs 2026-10-17     # data publikacji = data scalenia PR

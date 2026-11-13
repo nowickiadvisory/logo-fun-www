@@ -8,7 +8,7 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 export const BASE = 'https://nowickiadvisory.github.io/logo-fun-www/';
 export const MAIL = 'milany2020+logofun@gmail.com';
 export const AKAPIT_DOSTAWCY =
-  'Dane przechowujemy u dostawcy chmury Supabase na serwerach we Frankfurcie (UE). Kody logowania wysyła w naszym imieniu dostawca poczty e-mail.';
+  'Dane przechowujemy u dostawcy chmury Supabase na serwerach we Frankfurcie (UE). Linki do logowania i do zmiany hasła wysyła w naszym imieniu dostawca poczty e-mail.';
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
